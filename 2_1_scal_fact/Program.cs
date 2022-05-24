@@ -1,4 +1,5 @@
 ﻿// Написать программу масштабирования фигуры
+
 void PrintArr(int[] array)  ///метод печати в консоль
 {
     int len = array.Length;
