@@ -1,5 +1,5 @@
 ﻿// Написать программу копирования массива
-int[] CopyArr(int[] array)
+int[] CopyArr(int[] array)          // метод копирования
 {   
     int len = array.Length;
     int[] arr_new = new int[len];
@@ -7,18 +7,19 @@ int[] CopyArr(int[] array)
     {
         arr_new[i] = array[i];
     }
-    return array;
+    return arr_new;
 }
 
 
 Console.WriteLine("Введите количество элеметов массива");
 int n = int.Parse(Console.ReadLine() ?? "0");
 int[] array = new int[n];
-for(int i = 0; i < n; i++)
+for(int i = 0; i < n; i++)  ///заполняем массив
 {   
     Console.WriteLine($"Введите {i} элемет массива");
     array[i] = int.Parse(Console.ReadLine());
 }
-Console.WriteLine(String.Join( " ", array));
-int[] a = CopyArr(array);
-Console.WriteLine(String.Join(" ", a));
+Console.WriteLine(String.Join( " ", array));  //вывод массива в консоль
+
+int[] a = CopyArr(array);                      //инициализация нового массива через метод копирования
+Console.WriteLine(String.Join(" ", a));        //вывод нового массива в консоль
